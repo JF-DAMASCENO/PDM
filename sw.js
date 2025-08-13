@@ -1,11 +1,11 @@
 const CACHE_NAME = "meu-pwa-cache-v1";
 const urlsToCache = [
-  "/",
-  "/index.html",
-  "/style.css",
-  "/app.js",
-  "/icons/icone-192.png",
-  "/icons/icone-512.png",
+  "/PDM 1308/",
+  "/PDM 1308/index.html",
+  "/PDM 1308/style.css",
+  "/PDM 1308/app.js",
+  "/PDM 1308/icons/icone-192.png",
+  "/PDM 1308/icons/icone-512.png",
 ];
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -48,3 +48,4 @@ self.addEventListener("activate", (event) => {
     })
   );
 });
+
