@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O joão acabou, obg pela participação...</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/PDM/sw.js').then(registration => {
+        console.log('Service Worker registrado com sucesso:', registration);
+      }).catch(error => {
+        console.log('Falha ao registrar Service Worker:', error);
+      });
+    });
+  }
+</script>
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+ <header>
+    <div class="container nav">
+      <div class="brand">SuaMarca</div>
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="#missao">Missão</a>
+        <a href="#historia">História</a>
+        <a href="#time">Time</a>
+        <a href="#valores">Valores</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container grid grid-2">
+        <div>
+          <h1>Sobre nós</h1>
+          <p>Conheça nossa história, missão e o time que transforma ideias em experiências reais.</p>
+          <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn" href="#historia">Nossa trajetória</a>
+            <a class="btn" style="background:#202431;color:#e9edf1" href="#time">Conheça o time</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="kpis">
+            <div class="kpi"><div class="n">10+</div><div class="muted">anos de estrada</div></div>
+            <div class="kpi"><div class="n">150+</div><div class="muted">projetos entregues</div></div>
+            <div class="kpi"><div class="n">98%</div><div class="muted">satisfação</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Missão / Visão / Propósito -->
+    <section id="missao">
+      <div class="container grid grid-2">
+        <div class="card">
+          <h2>Missão</h2>
+          <p class="muted">Capacitar pessoas e negócios com soluções simples, acessíveis e de alto impacto.</p>
+        </div>
+        <div class="card">
+          <h2>Visão</h2>
+          <p class="muted">Ser referência em qualidade e experiência, unindo tecnologia e design centrado no usuário.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- História (linha do tempo simples) -->
+    <section id="historia">
+      <div class="container">
+        <h2>Nossa história</h2>
+        <ul class="list" aria-label="Linha do tempo">
+          <li><strong>2014</strong> — Nascemos com o objetivo de resolver problemas reais com produtos digitais.</li>
+          <li><strong>2018</strong> — Expandimos a operação e criamos parcerias estratégicas.</li>
+          <li><strong>2021</strong> — Lançamos nossa plataforma própria e atingimos 100+ projetos.</li>
+          <li><strong>Hoje</strong> — Seguimos evoluindo com foco em pessoas, dados e resultado.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Time -->
+    <section id="time">
+      <div class="container">
+        <h2>Nosso time</h2>
+        <div class="team">
+          <article class="person" aria-label="Membro do time">
+            <span class="badge">Direção</span>
+            <h4>Ana Souza</h4>
+            <p class="muted">CEO & Estratégia</p>
+          </article>
+          <article class="person" aria-label="Membro do time">
+            <span class="badge">Produto</span>
+            <h4>Lucas Ribeiro</h4>
+            <p class="muted">Head de Produto</p>
+          </article>
+          <article class="person" aria-label="Membro do time">
+            <span class="badge">Tecnologia</span>
+            <h4>Marina Costa</h4>
+            <p class="muted">Engenharia & QA</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Valores -->
+    <section id="valores">
+      <div class="container grid">
+        <h2>Valores que nos guiam</h2>
+        <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+          <div class="card"><strong>Transparência</strong><p class="muted">Relações claras e honestas, dentro e fora.</p></div>
+          <div class="card"><strong>Qualidade</strong><p class="muted">Excelência em cada entrega, do detalhe ao todo.</p></div>
+          <div class="card"><strong>Velocidade</strong><p class="muted">Iterar rápido, aprender sempre, melhorar contínuo.</p></div>
+          <div class="card"><strong>Foco no usuário</strong><p class="muted">Decisões guiadas por necessidade real.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <h2>Perguntas frequentes</h2>
+        <div class="faq grid">
+          <details><summary>Vocês atendem projetos de qualquer tamanho?</summary><p class="muted">Sim. Ajustamos escopo e equipe para cada contexto.</p></details>
+          <details><summary>Como iniciar um projeto?</summary><p class="muted">Entre em contato, fazemos uma conversa de descoberta sem custo.</p></details>
+          <details><summary>Trabalham remoto?</summary><p class="muted">Totalmente. Também podemos atuar presencialmente quando necessário.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container">
+      <p class="muted">© <span id="y"></span> SuaMarca — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Atualiza ano no rodapé (opcional)
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
