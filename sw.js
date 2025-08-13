@@ -3,6 +3,7 @@ const urlsToCache = [
   "/PDM/",
   "/PDM/index.html",
   "/PDM/style.css",
+  "/PDM/sobre.html",
   "/PDM/app.js",
 ];
 self.addEventListener("install", (event) => {
